@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary: #d47800;
+    --primary-hover: #d88d2b;
+    --white: #fff;
+    --black: #000
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+
+/* NAVBAR */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 40px;
+    width: 100%;
+    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.38);
+    ;
+    background: var(--primary);
+}
+
+.navigation .nav-logo {
+    color: var(--white);
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+}
+
+.navigation ul {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+.navigation ul li .nav-button {
+    background-color: transparent;
+    border: none;
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    transition: all 0.3s;
+}
+
+.navigation ul li .nav-button:hover,
+.navigation ul li .nav-button:focus {
+    opacity: 0.5;
+    scale: 1.1;
+}
+
+.navigation .menu {
+    cursor: pointer;
+    display: none;
+}
+
+.navigation .menu .bar {
+    display: block;
+    background-color: var(--white);
+    height: 3px;
+    width: 28px;
+    margin: 5px auto;
+
+}
+
+
+.section {
+    height: 88vh;
+    margin-top: 4vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+/* HOME */
+.home {
+    width: 100%;
+    height: 92vh;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+
+
+.home-texts {
+    max-width: 37rem;
+}
+
+.home-texts .home-title {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.home-texts .home-text {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+
+}
+
+.home-texts .home-text span{
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.home-btn1 {
+    padding: 15px 45px;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: 10px;
+    font-weight: 700;
+    margin-right: 20px;
+    transition: all 0.3s;
+
+}
+
+.home-btn1:hover,
+.home-btn1:focus {
+    background-color: var(--primary-hover);
+    scale: 1.1;
+}
+
+.home-btn2 {
+    padding: 15px 45px;
+    color: var(--primary);
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.home-btn2:hover
+.home-btn2:focus {
+    opacity: 0.5;
+    scale: 1.1;
+}
+
+.home-img img{
+    max-width: 100%;
+}
+
+/* RESPONSIVIDADE MOBILE */
+@media (min-width: 351px) and (max-width:1100px) {
+    /* NAVBAR */
+    .navigation {
+        padding: 18px 20px
+    }
+
+    .navigation .menu {
+        display: block;
+    }
+
+    .navigation .menu .bar {
+        transition: 0.3s;
+    }
+
+
+    .navigation .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.3s;
+    }
+    .navigation .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .navigation .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.3s;
+
+    }
+
+
+    .nav-list {
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        gap: -10px;
+        background-color: var(--primary);
+        transition: 0.3s;
+    }
+
+    .nav-list.ativo {
+        right: 0;
+    }
+
+    /* HOME */
+    .home {
+        padding: 100px 2%;
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    
+    .home-texts .home-title {
+        font-size: 36px;
+    }
+    
+    .home-texts .home-text {
+        font-size: 36px;
+        line-height: 3rem;
+    
+    }
+
+    .home-img img{
+        max-width: 125%;
+    }
+
+}
+
+
+/* RESPONSIVIDADE MOBILE TELAS MENORES */
+@media (max-width:350px) {
+    /* NAVBAR */
+    .navigation {
+        padding: 12px 14px
+    }
+
+    .navigation .nav-logo {
+        max-width: none;
+        font-size: 1rem;
+    }
+
+    .navigation .menu {
+        display: block;
+    }
+
+    .navigation .menu .bar {
+        transition: 0.3s;
+    }
+
+
+    .navigation .menu.ativo .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+        transition: 0.3s;
+    }
+    .navigation .menu.ativo .bar:nth-child(2){
+        opacity: 0;
+        transition: 0.3s;
+    }
+    .navigation .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+        transition: 0.3s;
+
+    }
+
+
+    .nav-list {
+        position: fixed;
+        right: -100%;
+        top: 53px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        gap: -10px;
+        background-color: var(--primary);
+        transition: 0.3s;
+    }
+
+    .nav-list.ativo {
+        right: 0;
+    }
+
+    /* HOME */
+    .home {
+        padding: 40px 5%;
+        flex-direction: column;
+        text-align: center;
+        gap: 5rem;
+    }
+
+    
+    .home-texts .home-title {
+        font-size: 28px;
+    }
+    
+    .home-texts .home-text {
+        font-size: 28px;
+        line-height: 2rem;
+    
+    }
+    .home-texts .home-btn1,
+    .home-texts .home-btn2 {
+        font-size: 12px;
+        padding: 15px 20px;
+    }
+
+}
