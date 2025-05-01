@@ -8,7 +8,7 @@ menu.addEventListener('click', () =>{
 });
 
 //SPA - Fetch Página Inicial
-function abrirHeroHome(){
+function abrirHeroHome(){ 
     fetch ('pages/herohome.html')
         .then(res => res.text())
         .then(conteudo => {
